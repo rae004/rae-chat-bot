@@ -19,10 +19,11 @@ interface Mix {
 const mix = (mixPlugin as unknown as Mix).default;
 
 export default defineConfig({
+    base: './',
     plugins: [
         react(),
-        mix({
-            handler: './src/api/api.ts',
-        }),
+        // mix({
+        //     handler: './src/api/api.ts',
+        // }),
     ],
 });

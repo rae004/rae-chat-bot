@@ -1,12 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App.tsx';
-import './index.css';
+import { StrictMode } from 'react';
+import * as ReactDOM from 'react-dom/client';
+import { Analytics } from '@vercel/analytics/react';
 
-ReactDOM.createRoot(
+import App from './app/app';
+
+const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement,
-).render(
-    <React.StrictMode>
+);
+root.render(
+    <StrictMode>
         <App />
-    </React.StrictMode>,
+        <Analytics />
+    </StrictMode>,
 );
